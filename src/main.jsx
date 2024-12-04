@@ -1,15 +1,22 @@
-import React from 'react'
-import ReactDom from 'react-dom/client'
-import App from './App.jsx'
+import React from "react";
+import ReactDom from "react-dom/client";
+import App from "./App.jsx";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./dist/css/main.css";
+import "animate.css";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 import {BrowserRouter} from 'react-router-dom'
 
 ReactDom.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+    <ScrollToTop/>
       <App/>
     </BrowserRouter>
   </React.StrictMode>,
